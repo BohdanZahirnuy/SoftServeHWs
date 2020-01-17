@@ -13,9 +13,9 @@ namespace RegexTask1
         {
             string checkPattern = @"^\d{4}\\\d{2}\\\d{2} \d{2}:\d{2}$";
             string pattern = @"^(1[0-9]{3}|200|[0-9]{1}|201[0-3])\\(0[0-9]{1}|1[0-2]{1})\\([0-2]{1}[0-9]{1}|[3]{1}[0]{1}) ([0-1]{1}[0-9]{1}|[2]{1}[0-3]{1}):([0-5]{1}[0-9]{1}|[6][0])$";
-         
-                Console.WriteLine(@"Enter date in format yyyy\mm\dd hh:mm");
-                  string date = Console.ReadLine();
+
+            Console.WriteLine(@"Enter date in format yyyy\mm\dd hh:mm");
+            string date = Console.ReadLine();
 
             if (Regex.IsMatch(date, checkPattern))
             {
@@ -32,7 +32,7 @@ namespace RegexTask1
             }
             else
             {
-                Console.WriteLine(@"Incorrect format. Please write in format yyyy\mm\dd hh:mm" );
+                Console.WriteLine(@"Incorrect format. Please write in format yyyy\mm\dd hh:mm");
                 Console.WriteLine(@"Example: 2012\12\12 12:12");
             }
             Console.ReadKey();
